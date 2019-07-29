@@ -10680,15 +10680,17 @@ hr.light {
   }
 }
 @media (max-width: 719px){
+  .bg-content {
+    margin-top: -170px;
+  }
   header.masthead {
+    margin-top: 170px;
+    padding-top: 10rem;
+    padding-bottom: 200px !important;
     background: url('../img/bg.jpg');
     background-position: right;
-    background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
-    padding-top: 10rem;
-    padding-bottom: calc(10rem - 72px);
-    
   }
 }
 header h1,

@@ -10668,15 +10668,28 @@ hr.light {
     color: #f7b427;
   }
 }
-
-header.masthead {
-  padding-top: 10rem;
-  padding-bottom: calc(10rem - 72px);
-  background: url('../img/bg.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
+@media (min-width: 720px) {
+  header.masthead {
+    padding-top: 10rem;
+    padding-bottom: calc(10rem - 72px);
+    background: url('../img/bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+}
+@media (max-width: 719px){
+  header.masthead {
+    background: url('../img/bg.jpg');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    padding-top: 10rem;
+    padding-bottom: calc(10rem - 72px);
+    
+  }
 }
 header h1,
 header h2,
@@ -10753,13 +10766,6 @@ header.masthead {
     font-size: 3rem;
   }
 }
-
-@media (min-width: 1200px) {
-  header.masthead h1 {
-    font-size: 3.5rem;
-  }
-}
-
 #portfolio .container-fluid {
   max-width: 1920px;
 }
@@ -10790,14 +10796,14 @@ header.masthead {
   text-align: center;
   opacity: 0;
   color: #fff;
-  background: rgba(244, 98, 58, 0.9);
+  background: rgba(33, 32, 30, 0.6);
   -webkit-transition: opacity 0.25s ease;
   transition: opacity 0.25s ease;
   text-align: center;
 }
 
 #portfolio .container-fluid .portfolio-box .portfolio-box-caption .project-category {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 0.85rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -10809,6 +10815,11 @@ header.masthead {
 
 #portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption {
   opacity: 1;
+}
+@media (min-width: 1200px) {
+  header.masthead h1 {
+    font-size: 3.5rem;
+  }
 }
 
 /* Add New */
@@ -10976,4 +10987,73 @@ header.masthead {
   font-family:'Darker Grotesque' !important;
   color: #403f3d;
   opacity: 1; /* Firefox */
+}
+
+/* Try 4 */
+.cabesamping {
+  display: none;
+}
+@media (min-width:960px) {
+  .cabesamping {
+    display: block !important;
+    width: 100%;
+    margin-top: -500px;
+    margin-bottom: -240px;
+  }
+
+  .image {
+    opacity: 1;
+    display: block;
+    width: 200px;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+
+  .middle {
+    position: absolute;
+    top: 15%;
+    bottom: 0;
+    left: 15%;
+    right: 0;
+    height: 200px;
+    width: 200px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #21201e;
+    border-radius: 50%;
+  }
+
+  .rounded:hover .image {
+    opacity: 0.3;
+  }
+
+  .rounded:hover .middle {
+    opacity: 1;
+  }
+  .rounded:hover .sub-title {
+    display: none;
+  }
+  .text {
+    display: block;
+    margin-top: 40% !important;
+    color: white;
+    font-size: 16px;
+    text-decoration: underline;
+  }
+}
+@media(max-width:959px) {
+  .middle {
+    position: absolute;
+    top: 15%;
+    bottom: 0;
+    left: 15%;
+    right: 0;
+    height: 200px;
+    width: 200px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #21201e;
+    border-radius: 50%;
+  }
 }
